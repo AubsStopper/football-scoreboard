@@ -1,6 +1,6 @@
 //TODO: STEP 1 - Import the useState hook.
 import React, { useState } from "react";
-import BottomRow from "./BottomRow";
+import Controls from "./components/controls";
 import Scoreboard from "./components/scoreboard";
 import "./App.css";
 
@@ -33,21 +33,7 @@ function App() {
   return (
     <div className="container">
       <Scoreboard apple={homeScore} orange={awayScore} />
-      <section className="buttons">
-        <div className="homeButtons">
-
-          {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
-          <button className="homeButtons__touchdown" onClick={homeScoreHandler}>Home Touchdown</button>
-          <button className="homeButtons__fieldGoal"onClick={homeScoreHandler}>Home Field Goal</button>
-          <button className="homeButtons__extraPoint"onClick={homeScoreHandler}>Home Extra Point</button>
-
-        </div>
-        <div className="awayButtons">
-          <button className="awayButtons__touchdown"onClick={awayScoreHandler}>Away Touchdown</button>
-          <button className="awayButtons__fieldGoal" onClick={awayScoreHandler}>Away Field Goal</button>
-          <button className="awayButtons__extraPoint" onClick={awayScoreHandler}>Away Extra Point</button>
-        </div>
-      </section>
+      <Controls homeScoreHandler={homeScoreHandler} awayScoreHandler={awayScoreHandler} />
     </div>
   );
 }

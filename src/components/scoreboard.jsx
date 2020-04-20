@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import BottomRow from "./BottomRow";
 
 function Scoreboard(props) {
